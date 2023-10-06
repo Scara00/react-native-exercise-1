@@ -51,7 +51,7 @@ export function Page1(): JSX.Element {
 
       {loading ? (
         <Text>STO CARICANDO...</Text>
-      ) : listProduct.length > 0 && !loading ? (
+      ) : (
         <FlatList
           style={{ padding: 16 }}
           data={listProduct}
@@ -69,8 +69,6 @@ export function Page1(): JSX.Element {
           }}
           keyExtractor={(item) => item.id}
         />
-      ) : (
-        <Text>NESSUN RISULTATO TROVATO</Text>
       )}
     </SafeAreaView>
   );
